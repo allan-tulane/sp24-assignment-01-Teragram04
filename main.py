@@ -15,8 +15,18 @@ def foo(x):
       return (foo(x-1) + foo(x-2))
     pass
 
+
 def longest_run(mylist, key):
-    ### TODO
+    current_run = 0
+    longest_run = 0
+    for i in range(len(mylist)):
+      if mylist[i] == key:
+        current_run += 1
+      else:
+        current_run = 0
+      if current_run > longest_run:
+        longest_run = current_run
+    return longest_run
     pass
 
 

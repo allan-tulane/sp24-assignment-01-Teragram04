@@ -54,8 +54,12 @@ def to_value(v):
         return int(v)
         
 def longest_run_recursive(mylist, key):
-    ### TODO
-    pass
+  for i in range(len(mylist)):
+    if mylist[i] == key:
+      return Result(longest_run_recursive(mylist[0:i], key), longest_run_recursive(mylist[i+1:], key), longest_run(mylist, key), False)
+  else:
+    return Result(0, 0, 0, True)
+
 
 
 
